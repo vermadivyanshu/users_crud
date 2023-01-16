@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+  <form method={{action}} class="user-form">
+    <p class="info">Info</p>
+    {% csrf_token %}
+    {{form}}
+    <div class="button-container">
+      <input type="submit" value="Save" class="btn btn-primary save-btn"/>
+    </div>
+  </form>
+  {% block render_accessory %}
+  {% endblock %}
+  
+
+{% endblock %}

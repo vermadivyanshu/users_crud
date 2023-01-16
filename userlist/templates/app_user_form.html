@@ -1,0 +1,22 @@
+{{ form.non_field_errors }}
+<div class="fieldWrapper">
+    {{ form.first_name }}
+    {{ form.first_name.errors }}
+</div>
+<div class="fieldWrapper">
+  {{ form.last_name }}
+  {{ form.last_name.errors }}
+</div>
+<div class="fieldWrapper">
+  {{ form.email }}
+  {{ form.email.errors }}
+</div>
+<div class="fieldWrapper">
+  {{ form.phone_number }}
+  {{ form.phone_number.errors }}
+</div>
+<div class="label-role">Role</div>
+<div class="fieldWrapper">
+  {{ form.is_admin }}
+  {{ form.is_admin.errors }}
+</div>

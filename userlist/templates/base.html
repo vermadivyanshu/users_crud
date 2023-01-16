@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App users</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <div class="main">
+    <header class="heading">
+      <div class="heading-container">
+        <div class="main-heading">{{heading}}</div>
+        <div class="subheading">{{sub_heading}}</div>
+      </div>
+      {% block right_render_accessory_heading %}
+      {% endblock %}
+    </header>
+    <div class="horizontal-rule"></div>
+    
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>

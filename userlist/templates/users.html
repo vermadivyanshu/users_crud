@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block right_render_accessory_heading %}
+  <div>
+    <a href="/users/add" class="btn btn-primary">Add</a>
+  </div>
+{% endblock%}
+{% block content %}
+  {%if users|length > 0 %}
+    <ul class="users-list">
+      {% for user in users%}
+      <li>
+        <a href="/users/{{user.id}}/">
+          <div class="user-item-container">
+            <div class="user-avatar">
+              <img src="{% static 'placeholder_avatar.jpg' %}" alt="user avatar">
+            </div>
+            <div class="user-info-container">
+              <div class="full_name">{{user.full_name}}</div>
+              <div>{{user.phone_number}}</div>
+              <div>{{user.email}}</div>
+            </div>
+          </div>
+        </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <div class="users-list-no-data">No team members yet</div>
+  {% endif %}
+  
+{% endblock content %}
