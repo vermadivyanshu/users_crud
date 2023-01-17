@@ -8,7 +8,14 @@ pip install pipenv
 ```
 From the root directory, run the following:
 ```
-pipenv install
+pipenv shell #create and activate environment
+pipenv install #install packages
+```
+To run the server, run the following from the root directory:
+```
+python manage.py migrate
+python manage.py createsuperuser #to create super user for logging in to view the routes
+python manage.py runserver #runs local server
 ```
 
 ### Running tests

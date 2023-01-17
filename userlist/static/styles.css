@@ -82,6 +82,7 @@ ul.errorlist li {
   color: red;
 }
 .btn {
+  cursor: pointer; 
   min-height: 2rem;
   min-width: 3rem;
   padding: 0.2rem;
