@@ -16,7 +16,7 @@ To run the server, run the following from the root directory:
 python manage.py migrate
 python manage.py createsuperuser #to create super user for logging in to view the routes
 python manage.py runserver #runs local server
-Server runs on http://127.0.0.1:8000/users/
+Server runs on http://127.0.0.1:8000/
 ```
 
 ### Running tests
