@@ -1,17 +1,7 @@
 from django.test import TestCase
 from .models import AppUser
-from django.contrib.auth import get_user_model
-
-User = get_user_model()
 
 class TestUserListView(TestCase):
-
-  def setUp(self):
-    self.user = User.objects.create(username='test')
-    self.user.set_password('test')
-    self.user.save()
-    self.client.login(username='test', password='test')
-  
   def test_user_list_view(self):
     AppUser.objects.create(email='a@test.com', first_name='test1', last_name='test2', phone_number='343-558-7788')
     response = self.client.get('/users/')
