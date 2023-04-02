@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import RegexValidator
 
 # AppUsers model
+
 class AppUser(models.Model):
   email = models.EmailField(unique=True, blank=False, null=False)
   first_name = models.CharField(max_length=250, null=False, blank=False)
@@ -15,9 +16,9 @@ class AppUser(models.Model):
 
   @classmethod
   def get_all_ordered_by_created_at(self):
-    return self.objects.all().order_by('-created_at')
+    return self.objects.raw('SELECT * FROM userlist_appuser ORDER BY userlist_appuser.created_at DESC')
   
   @property
   def full_name(self):
-    return self.first_name + ' ' + self.last_name;
+    return self.first_name + ' ' + self.last_name
 
